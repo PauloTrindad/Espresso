@@ -56,6 +56,18 @@
     <h1>XBrowser: Browser With XHTML Rich Support</h1>
   </header>
   <nav>
+    <div id="search-bar">
+<label for="search-term">Search Google:</label>
+<input type="search" id="search-term" />
+<input type="submit" value="Search" />
+</div>
+<script>
+function searchGoogle() {
+var searchTerm = document.getElementById("search-term").value;
+window.open("https://www.google.com/search?q=" + searchTerm);
+}
+document.getElementById("search-bar").addEventListener("submit", searchGoogle);
+</script>
     <ul>
       <li><a href="https://google.com">Google</a></li>
        <li><a href="https://en.wikipedia.com">Wikipedia</a></li>
